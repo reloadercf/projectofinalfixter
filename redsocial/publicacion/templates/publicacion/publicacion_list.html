@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+    <h2>Publicaciones</h2>
+    <ul>
+            {%for obj in object_list%}
+            <li>
+                <a href="{{obj.get_absolute_url}}">{{obj.name}}</a>
+                <span>{{obj.texto}}</span>
+            </li>
+
+            {%endfor%}
+    </ul>
+{%endblock content%}
